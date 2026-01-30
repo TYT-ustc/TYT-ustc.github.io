@@ -28,7 +28,7 @@
 <meta property="og:description" content="参考Scully的量子光学 偏迹的定义及物理含义在考虑一个受到环境影响而发生耗散(damping)的系统时，认为该系统与外界环境发生耦合。对于两个耦合的系统采用张量积描述。讨论系统本身时，我们希望略过外界环境的状态，这时候就要采用偏迹。与取迹运算类似，偏迹也是考虑对被略去的那一状态求系统的期望。 数学定义：对于 $C &#x3D; A \otimes B$; general的研究环境耗散的方法考虑系统S，环">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2026-01-29T09:21:26.000Z">
-<meta property="article:modified_time" content="2026-01-30T13:31:02.262Z">
+<meta property="article:modified_time" content="2026-01-30T13:44:42.023Z">
 <meta property="article:author" content="tonikroos">
 <meta property="article:tag" content="理论知识">
 <meta property="article:tag" content="量子光学">
@@ -214,7 +214,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">Edited on</span>
-      <time title="Modified: 2026-01-30 21:31:02" itemprop="dateModified" datetime="2026-01-30T21:31:02+08:00">2026-01-30</time>
+      <time title="Modified: 2026-01-30 21:44:42" itemprop="dateModified" datetime="2026-01-30T21:44:42+08:00">2026-01-30</time>
     </span>
 
   
@@ -244,7 +244,7 @@
 <p>$ V = \sum_{k} g_k[{b_k}^\dagger a e^{-i(\omega-\{\omega}_k)t} + a^\dagger b_k e^{i(\omega-\{\omega}_k)t}] $</p>
 <p>其中$g_k$为相互作用常数</p>
 <p><strong>该式子在书中直接给出，未经推导。可能的想法是考虑两个物理过程：腔内产生一个光子并逸出，腔外的光子进入腔内，并乘以相应的由于采用相互作用绘景的相位修正因子</strong></p>
-<p>将该式子代入前面得到简化的方程。这里按照我们的前提，环境处于热库状态，查阅资料可以找到需要的参数：$<b_k> = Tr_R(b_k \rho _R)$和$&lt; b_k b_j&gt; = Tr_R(b_k b_j \rho _R)$的值。这里的计算较为繁琐，故直接给出结果：</p>
+<p>将该式子代入前面得到简化的方程。这里按照我们的前提，环境处于热库状态，查阅资料可以找到需要的参数：$Tr_R(b_k \rho _R)$ 和 $Tr_R(b_k b_j \rho _R)$的值。这里的计算较为繁琐，故直接给出结果：</p>
 <p>$\dot{\rho}_s = -\frac{\Gamma}{2} \bar{n}_th(aa^\dagger \rho - 2a^\dagger \rho a + \rho a a^\dagger) -\frac{\Gamma}{2}(1+ \bar{n}_th) (a^\dagger a \rho - 2a \rho a^\dagger + \rho a^\dagger a)$</p>
 <p>其中$\Gamma$为一个与g有关的常数。T → 0时，热库内无光子，称为零温极限，</p>
 <p>$\dot{\rho}_s = - \frac{\Gamma}{2} (a^\dagger a \rho - 2a \rho a^\dagger + \rho a^\dagger a)$</p>
