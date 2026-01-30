@@ -1,15 +1,26 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <meta charset="utf-8">
-  
-  <title>单模光场的耗散理论 | Hexo</title>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#222" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#222" media="(prefers-color-scheme: dark)"><meta name="generator" content="Hexo 8.1.1">
 
-  <!-- keywords -->
-  
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
 
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="参考Scully的量子光学 偏迹的定义及物理含义在考虑一个受到环境影响而发生耗散(damping)的系统时，认为该系统与外界环境发生耦合。对于两个耦合的系统采用张量积描述。讨论系统本身时，我们希望略过外界环境的状态，这时候就要采用偏迹。与取迹运算类似，偏迹也是考虑对被略去的那一状态求系统的期望。 数学定义：对于 $C &#x3D; A \otimes B$; general的研究环境耗散的方法考虑系统S，环">
+<link rel="stylesheet" href="/css/main.css">
+
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css" integrity="sha256-VHqXKFhhMxcpubYf9xiWdCiojEbY9NexQ4jh8AxbvcM=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"example.com","root":"/","images":"/images","scheme":"Muse","darkmode":true,"version":"8.27.0","exturl":false,"sidebar":{"position":"left","width_expanded":320,"width_dual_column":240,"display":"post","padding":18,"offset":12},"hljswrap":true,"codeblock":{"theme":{"light":"default","dark":"stackoverflow-dark"},"prism":{"light":"prism","dark":"prism-dark"},"copy_button":{"enable":false,"style":null},"fold":{"enable":false,"height":500},"language":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"duration":200,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"i18n":{"placeholder":"Searching...","empty":"We didn't find any results for the search: ${query}","hits_time":"${hits} results found in ${time} ms","hits":"${hits} results found"}}</script><script src="/js/config.js" defer></script>
+
+    <meta name="description" content="参考Scully的量子光学 偏迹的定义及物理含义在考虑一个受到环境影响而发生耗散(damping)的系统时，认为该系统与外界环境发生耦合。对于两个耦合的系统采用张量积描述。讨论系统本身时，我们希望略过外界环境的状态，这时候就要采用偏迹。与取迹运算类似，偏迹也是考虑对被略去的那一状态求系统的期望。 数学定义：对于 $C &#x3D; A \otimes B$; general的研究环境耗散的方法考虑系统S，环">
 <meta property="og:type" content="article">
 <meta property="og:title" content="单模光场的耗散理论">
 <meta property="og:url" content="http://example.com/2026/01/29/%E5%8D%95%E6%A8%A1%E5%85%89%E5%9C%BA%E7%9A%84%E8%80%97%E6%95%A3%E7%90%86%E8%AE%BA/index.html">
@@ -22,180 +33,200 @@
 <meta property="article:tag" content="理论知识">
 <meta property="article:tag" content="量子光学">
 <meta name="twitter:card" content="summary">
-  
-    <link rel="alternative" href="/atom.xml" title="Hexo" type="application/atom+xml">
-  
-  
-    <link rel="icon" href="/img/favicon.ico">
-  
-  
-<link rel="stylesheet" href="/css/style.css">
-
-  
-  
-
-  
-<script src="//cdn.bootcss.com/require.js/2.3.2/require.min.js"></script>
-
-  
-<script src="//cdn.bootcss.com/jquery/3.1.1/jquery.min.js"></script>
 
 
+<link rel="canonical" href="http://example.com/2026/01/29/%E5%8D%95%E6%A8%A1%E5%85%89%E5%9C%BA%E7%9A%84%E8%80%97%E6%95%A3%E7%90%86%E8%AE%BA/">
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"en","comments":true,"permalink":"http://example.com/2026/01/29/%E5%8D%95%E6%A8%A1%E5%85%89%E5%9C%BA%E7%9A%84%E8%80%97%E6%95%A3%E7%90%86%E8%AE%BA/","path":"2026/01/29/单模光场的耗散理论/","title":"单模光场的耗散理论"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>单模光场的耗散理论 | Hexo</title>
   
+
+
+
+
+
+
+
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous" defer></script>
+<script src="/js/utils.js" defer></script><script src="/js/motion.js" defer></script><script src="/js/sidebar.js" defer></script><script src="/js/next-boot.js" defer></script>
+
+  
+
+
+
+
+
+
+  
+
+
+
+
+  
+
+  <script class="next-config" data-name="enableMath" type="application/json">true</script><script class="next-config" data-name="mathjax" type="application/json">{"enable":true,"tags":"none","js":{"url":"https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.2/es5/tex-mml-chtml.js","integrity":"sha256-MASABpB4tYktI2Oitl4t+78w/lyA+D7b/s9GEP0JOGI="}}</script>
+<script src="/js/third-party/math/mathjax.js" defer></script>
+
+
+
+  <noscript>
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
 <!-- hexo injector head_end start -->
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css">
 
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/hexo-math@4.0.0/dist/style.css">
-<!-- hexo injector head_end end --><meta name="generator" content="Hexo 8.1.1"></head>
-<body>
-  <div id="container">
-    <div id="particles-js"></div>
-    <div class="left-col">
-    <div class="overlay"></div>
-<div class="intrude-less">
-	<header id="header" class="inner">
-		<a href="/" class="profilepic">
-			
-				<img lazy-src="" class="js-avatar">
-			
-		</a>
+<!-- hexo injector head_end end --></head>
 
-		<hgroup>
-			<h1 class="header-author"><a href="/">John Doe</a></h1>
-		</hgroup>
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
 
-		
+  <main class="main">
+    <div class="column">
+      <header class="header" itemscope itemtype="http://schema.org/WPHeader"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="Toggle navigation bar" role="button">
+    </div>
+  </div>
 
-		<div class="switch-area">
-			<div class="switch-wrap">
-				<section class="switch-part switch-part1">
-					<nav class="header-menu">
-						<ul>
-						
-							<li><a href="/">Home</a></li>
-				        
-							<li><a href="/archives">Archives</a></li>
-				        
-						</ul>
-					</nav>
-					<nav class="half-header-menu">
-						<a class="hide">Home</a>
-						<a>Tags</a>
-						<a>Links</a>
-						<a>About</a>
-					</nav>
-					<nav class="header-nav">
-						<div class="social">
-							
-						</div>
-						<!-- music -->
-						
-					</nav>
-				</section>
-				
-				
-				<section class="switch-part switch-part2">
-					<div class="widget tagcloud" id="js-tagcloud">
-						<a href="/tags/%E5%BC%95%E8%A8%80/" style="font-size: 10px;">引言</a> <a href="/tags/%E7%90%86%E8%AE%BA%E7%9F%A5%E8%AF%86/" style="font-size: 10px;">理论知识</a> <a href="/tags/%E7%A0%94%E7%A9%B6%E6%97%A5%E5%BF%97/" style="font-size: 10px;">研究日志</a> <a href="/tags/%E9%87%8F%E5%AD%90%E5%85%89%E5%AD%A6/" style="font-size: 10px;">量子光学</a>
-					</div>
-				</section>
-				
-				
-				
-				<section class="switch-part switch-part3">
-					<div id="js-friends">
-					
-			          <a target="_blank" class="main-nav-link switch-friends-link" href="https://github.com/">github</a>
-			        
-			        </div>
-				</section>
-				
+  <div class="site-meta">
 
-				
-				
-				<section class="switch-part switch-part4">
-				
-					<div id="js-aboutme">I&#39;m a developer.</div>
-				</section>
-				
-			</div>
-		</div>
-	</header>				
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <p class="site-title">Hexo</p>
+      <i class="logo-line"></i>
+    </a>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger" aria-label="Search" role="button">
+    </div>
+  </div>
 </div>
-    </div>
-    <div class="mid-col">
-      <nav id="mobile-nav">
-  	<div class="overlay">
-  		<div class="slider-trigger"></div>
-  		<h1 class="header-author js-mobile-header hide"></h1>
-  	</div>
-	<div class="intrude-less">
-		<header id="header" class="inner">
-			<div class="profilepic">
-				<img lazy-src="" class="js-avatar">
-			</div>
-			<hgroup>
-			  <h1 class="header-author"></h1>
-			</hgroup>
-			
-			<nav class="header-menu">
-				<ul>
-				
-					<li><a href="/">Home</a></li>
-		        
-					<li><a href="/archives">Archives</a></li>
-		        
-		        <div class="clearfix"></div>
-				</ul>
-			</nav>
-			<nav class="header-nav">
-				<div class="social">
-					
-				</div>
-			</nav>
-		</header>				
-	</div>
-</nav>
-      <div class="body-wrap"><article id="post-单模光场的耗散理论" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2026/01/29/%E5%8D%95%E6%A8%A1%E5%85%89%E5%9C%BA%E7%9A%84%E8%80%97%E6%95%A3%E7%90%86%E8%AE%BA/" class="article-date">
-  	<time datetime="2026-01-29T09:21:26.000Z" itemprop="datePublished">2026-01-29</time>
-</a>
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 class="article-title" itemprop="name">
-      单模光场的耗散理论
-      
-    </h1>
-  
 
-      </header>
-      
-      <div class="article-info article-info-post">
-        
-	<div class="article-tag tagcloud">
-		<ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E7%90%86%E8%AE%BA%E7%9F%A5%E8%AF%86/" rel="tag">理论知识</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E9%87%8F%E5%AD%90%E5%85%89%E5%AD%A6/" rel="tag">量子光学</a></li></ul>
-	</div>
 
-        
 
+
+
+
+
+</header>
         
-        <div class="clearfix"></div>
+  
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          Table of Contents
+        </li>
+        <li class="sidebar-nav-overview">
+          Overview
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%81%8F%E8%BF%B9%E7%9A%84%E5%AE%9A%E4%B9%89%E5%8F%8A%E7%89%A9%E7%90%86%E5%90%AB%E4%B9%89"><span class="nav-number">1.</span> <span class="nav-text">偏迹的定义及物理含义</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#general%E7%9A%84%E7%A0%94%E7%A9%B6%E7%8E%AF%E5%A2%83%E8%80%97%E6%95%A3%E7%9A%84%E6%96%B9%E6%B3%95"><span class="nav-number">2.</span> <span class="nav-text">general的研究环境耗散的方法</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%8D%95%E6%A8%A1%E5%85%89%E5%9C%BA%E4%B8%8E%E7%8E%AF%E5%A2%83%E8%80%A6%E5%90%88%E7%9A%84%E7%9B%B8%E4%BA%92%E4%BD%9C%E7%94%A8%E5%93%88%E5%AF%86%E9%A1%BF%E9%87%8F"><span class="nav-number">3.</span> <span class="nav-text">单模光场与环境耦合的相互作用哈密顿量</span></a></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">John Doe</p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+<div class="site-state-wrap animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        <a href="/archives/">
+          <span class="site-state-item-count">3</span>
+          <span class="site-state-item-name">posts</span>
+        </a>
       </div>
-      
+      <div class="site-state-item site-state-tags">
+        <span class="site-state-item-count">4</span>
+        <span class="site-state-item-name">tags</span>
+      </div>
+  </nav>
+</div>
+
+        </div>
+      </div>
+    </div>
+
     
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p><em>参考Scully的量子光学</em></p>
+  </aside>
+
+
+    </div>
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="en">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2026/01/29/%E5%8D%95%E6%A8%A1%E5%85%89%E5%9C%BA%E7%9A%84%E8%80%97%E6%95%A3%E7%90%86%E8%AE%BA/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="John Doe">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Hexo">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="单模光场的耗散理论 | Hexo">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          单模光场的耗散理论
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+
+      <time title="Created: 2026-01-29 17:21:26" itemprop="dateCreated datePublished" datetime="2026-01-29T17:21:26+08:00">2026-01-29</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">Edited on</span>
+      <time title="Modified: 2026-01-30 21:31:02" itemprop="dateModified" datetime="2026-01-30T21:31:02+08:00">2026-01-30</time>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody"><p><em>参考Scully的量子光学</em></p>
 <h2 id="偏迹的定义及物理含义"><a href="#偏迹的定义及物理含义" class="headerlink" title="偏迹的定义及物理含义"></a>偏迹的定义及物理含义</h2><p>在考虑一个受到环境影响而发生耗散(damping)的系统时，认为该系统与外界环境发生耦合。对于两个耦合的系统采用张量积描述。讨论系统本身时，我们希望略过外界环境的状态，这时候就要采用偏迹。与取迹运算类似，偏迹也是考虑对被略去的那一状态求系统的期望。</p>
 <p>数学定义：对于 $C = A \otimes B$;</p>
 <h2 id="general的研究环境耗散的方法"><a href="#general的研究环境耗散的方法" class="headerlink" title="general的研究环境耗散的方法"></a>general的研究环境耗散的方法</h2><p>考虑系统S，环境R，有${\rho} _s= Tr_R ({\rho}_{SR}) $，在相互作用绘景下，这个系统的总能量记为V，则：</p>
@@ -219,33 +250,35 @@
 <p>$\dot{\rho}_s = - \frac{\Gamma}{2} (a^\dagger a \rho - 2a \rho a^\dagger + \rho a^\dagger a)$</p>
 <p>这就是linblad主方程。</p>
 
-      
     </div>
-    
-  </div>
-  
-    
-<nav id="article-nav">
-  
-    <a href="/2026/01/30/%E8%AE%BA%E6%96%87%E5%A4%8D%E7%8E%B0%EF%BC%9A%E5%9F%BA%E4%BA%8E%E8%BD%AC%E7%BD%AE%E4%BF%A1%E9%81%93%E6%96%B9%E6%B3%95%E7%9A%84AQEC%E7%90%86%E8%AE%BA%E6%80%A7%E8%83%BD%E5%88%86%E6%9E%90/" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">&lt;</strong>
-      <div class="article-nav-title">
-        
-          论文复现：基于转置信道方法的AQEC理论性能分析
-        
-      </div>
-    </a>
-  
-  
-    <a href="/2026/01/28/%E5%BC%95%E8%A8%80/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">引言</div>
-      <strong class="article-nav-caption">&gt;</strong>
-    </a>
-  
-</nav>
 
-  
-</article>
+    
+    
+    
+
+    <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/%E7%90%86%E8%AE%BA%E7%9F%A5%E8%AF%86/" rel="tag"># 理论知识</a>
+              <a href="/tags/%E9%87%8F%E5%AD%90%E5%85%89%E5%AD%A6/" rel="tag"># 量子光学</a>
+          </div>
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/2026/01/28/%E5%BC%95%E8%A8%80/" rel="prev" title="引言">
+                  <i class="fa fa-angle-left"></i> 引言
+                </a>
+            </div>
+            <div class="post-nav-item">
+                <a href="/2026/01/30/%E8%AE%BA%E6%96%87%E5%A4%8D%E7%8E%B0%EF%BC%9A%E5%9F%BA%E4%BA%8E%E8%BD%AC%E7%BD%AE%E4%BF%A1%E9%81%93%E6%96%B9%E6%B3%95%E7%9A%84AQEC%E7%90%86%E8%AE%BA%E6%80%A7%E8%83%BD%E5%88%86%E6%9E%90/" rel="next" title="论文复现：基于转置信道方法的AQEC理论性能分析">
+                  论文复现：基于转置信道方法的AQEC理论性能分析 <i class="fa fa-angle-right"></i>
+                </a>
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
 
 
 
@@ -253,44 +286,40 @@
 
 
 </div>
-      <footer id="footer">
-  <div class="outer">
-    <div id="footer-info">
-      <div class="footer-left">
-        &copy; 2026 John Doe
-      </div>
-        <div class="footer-right">
-          <a href="http://hexo.io/" target="_blank">Hexo</a>  Theme <a href="https://github.com/preccrep/hexo-theme-jelly" target="_blank">Jelly</a>
-        </div>
-    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+  <div class="copyright">
+    &copy; 
+    <span itemprop="copyrightYear">2026</span>
+    <span class="with-love">
+      <i class="fa fa-heart"></i>
+    </span>
+    <span class="author" itemprop="copyrightHolder">John Doe</span>
   </div>
-</footer>
+  <div class="powered-by">Powered by <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/muse/" rel="noopener" target="_blank">NexT.Muse</a>
+  </div>
+
     </div>
-    
+  </footer>
+
   
-<link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
-
-
-
-<script>
-	var yiliaConfig = {
-		fancybox: true,
-		mathjax: false,
-		animate: true,
-		isHome: false,
-		isPost: true,
-		isArchive: false,
-		isTag: false,
-		isCategory: false,
-		open_in_new: false
-	}
-</script>
-
-<script src="/js/main.js"></script>
-
-
-
-
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
   </div>
+  <div class="sidebar-dimmer"></div>
+  <div class="back-to-top" role="button" aria-label="Back to top">
+    <i class="fa fa-arrow-up fa-lg"></i>
+    <span>0%</span>
+  </div>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
 </body>
 </html>
