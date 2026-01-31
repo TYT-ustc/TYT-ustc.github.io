@@ -198,9 +198,15 @@
         <i class="far fa-calendar"></i>
       </span>
       <span class="post-meta-item-text">Posted on</span>
-      
 
-      <time title="Created: 2026-01-30 20:53:30 / Modified: 21:27:05" itemprop="dateCreated datePublished" datetime="2026-01-30T20:53:30+08:00">2026-01-30</time>
+      <time title="Created: 2026-01-30 20:53:30" itemprop="dateCreated datePublished" datetime="2026-01-30T20:53:30+08:00">2026-01-30</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">Edited on</span>
+      <time title="Modified: 2026-01-31 18:37:59" itemprop="dateModified" datetime="2026-01-31T18:37:59+08:00">2026-01-31</time>
     </span>
 
   
@@ -213,8 +219,14 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          <p><em>参考PHYSICAL REVIEW A 81, 062342 (2010)和目标论文</em><br>z</p>
-
+          <p><em>参考PHYSICAL REVIEW A 81, 062342 (2010)和目标论文</em></p>
+<h2 id="转置信道的量子纠错方法"><a href="#转置信道的量子纠错方法" class="headerlink" title="转置信道的量子纠错方法"></a>转置信道的量子纠错方法</h2><p>转置通道$R_p$是针对给定噪声通道$\varepsilon$(其Kraus算符$E_i$)和代码子空间投影算符为(P)的解析定义恢复映射。其定义：</p>
+<p>$R_p = P \circ \varepsilon ^\dagger \circ N$</p>
+<p>其中N为归一化操作。</p>
+<p>具体地，其数学形式为：</p>
+<p>$R_p = \sum^{N}_{i=1} P{E^\dagger}_i\varepsilon(P) ^{-\frac{1}{2}}(\cdot) \varepsilon(P) ^{-\frac{1}{2}}{E}_i P$</p>
+<p>相对简单。该论文证明了$R_p$是满足CPTP条件，且在满足Knill-Laflamme条件时是完美纠错。</p>
+<h2 id="Knill-Laflamme条件"><a href="#Knill-Laflamme条件" class="headerlink" title="Knill-Laflamme条件"></a>Knill-Laflamme条件</h2><h2 id="目标论文情况的非Knill-Laflamme局限及实际采用的纠错框架"><a href="#目标论文情况的非Knill-Laflamme局限及实际采用的纠错框架" class="headerlink" title="目标论文情况的非Knill-Laflamme局限及实际采用的纠错框架"></a>目标论文情况的非Knill-Laflamme局限及实际采用的纠错框架</h2><h2 id="采用等效Lindblad主方程讨论理论纠错性能"><a href="#采用等效Lindblad主方程讨论理论纠错性能" class="headerlink" title="采用等效Lindblad主方程讨论理论纠错性能"></a>采用等效Lindblad主方程讨论理论纠错性能</h2>
       
     </div>
 
@@ -276,7 +288,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">Edited on</span>
-      <time title="Modified: 2026-01-30 21:44:42" itemprop="dateModified" datetime="2026-01-30T21:44:42+08:00">2026-01-30</time>
+      <time title="Modified: 2026-01-31 10:41:29" itemprop="dateModified" datetime="2026-01-31T10:41:29+08:00">2026-01-31</time>
     </span>
 
   
@@ -290,8 +302,6 @@
     
     <div class="post-body" itemprop="articleBody">
           <p><em>参考Scully的量子光学</em></p>
-<h2 id="偏迹的定义及物理含义"><a href="#偏迹的定义及物理含义" class="headerlink" title="偏迹的定义及物理含义"></a>偏迹的定义及物理含义</h2><p>在考虑一个受到环境影响而发生耗散(damping)的系统时，认为该系统与外界环境发生耦合。对于两个耦合的系统采用张量积描述。讨论系统本身时，我们希望略过外界环境的状态，这时候就要采用偏迹。与取迹运算类似，偏迹也是考虑对被略去的那一状态求系统的期望。</p>
-<p>数学定义：对于 $C = A \otimes B$;</p>
 <h2 id="general的研究环境耗散的方法"><a href="#general的研究环境耗散的方法" class="headerlink" title="general的研究环境耗散的方法"></a>general的研究环境耗散的方法</h2><p>考虑系统S，环境R，有${\rho} _s= Tr_R ({\rho}_{SR}) $，在相互作用绘景下，这个系统的总能量记为V，则：</p>
 <p>$i\hbar \dot{\rho} _{SR} = [V , \rho _{SR}]$</p>
 <p>把方程改写为二阶微扰方程，</p>
