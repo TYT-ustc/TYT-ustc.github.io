@@ -20,15 +20,15 @@
 
 <script class="next-config" data-name="main" type="application/json">{"hostname":"example.com","root":"/","images":"/images","scheme":"Muse","darkmode":true,"version":"8.27.0","exturl":false,"sidebar":{"position":"left","width_expanded":320,"width_dual_column":240,"display":"post","padding":18,"offset":12},"hljswrap":true,"codeblock":{"theme":{"light":"default","dark":"stackoverflow-dark"},"prism":{"light":"prism","dark":"prism-dark"},"copy_button":{"enable":false,"style":null},"fold":{"enable":false,"height":500},"language":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"duration":200,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"i18n":{"placeholder":"Searching...","empty":"We didn't find any results for the search: ${query}","hits_time":"${hits} results found in ${time} ms","hits":"${hits} results found"}}</script><script src="/js/config.js" defer></script>
 
-    <meta name="description" content="参考PHYSICAL REVIEW A 81, 062342 (2010)和目标论文 转置信道的量子纠错方法转置通道$R_p$是针对给定噪声通道$\varepsilon$(其Kraus算符$E_i$)和代码子空间投影算符为(P)的解析定义恢复映射。其定义： $R_p &#x3D; P \circ \varepsilon ^\dagger \circ N$ 其中N为归一化操作。 具体地，其数学形式为： $R_">
+    <meta name="description" content="参考PHYSICAL REVIEW A 81, 062342 (2010)和目标论文 转置信道的量子纠错方法转置通道$R_p$是针对给定噪声通道$ \mathcal{E} $ 其Kraus算符$E_i$和代码子空间投影算符为(P)的解析定义恢复映射。其定义： $R_p &#x3D; P \circ \mathcal{E} ^\dagger \circ N$ 其中N为归一化操作。 具体地，其数学形式为： $R">
 <meta property="og:type" content="article">
 <meta property="og:title" content="论文复现：基于转置信道方法的AQEC理论性能分析">
 <meta property="og:url" content="http://example.com/2026/01/30/%E8%AE%BA%E6%96%87%E5%A4%8D%E7%8E%B0%EF%BC%9A%E5%9F%BA%E4%BA%8E%E8%BD%AC%E7%BD%AE%E4%BF%A1%E9%81%93%E6%96%B9%E6%B3%95%E7%9A%84AQEC%E7%90%86%E8%AE%BA%E6%80%A7%E8%83%BD%E5%88%86%E6%9E%90/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="参考PHYSICAL REVIEW A 81, 062342 (2010)和目标论文 转置信道的量子纠错方法转置通道$R_p$是针对给定噪声通道$\varepsilon$(其Kraus算符$E_i$)和代码子空间投影算符为(P)的解析定义恢复映射。其定义： $R_p &#x3D; P \circ \varepsilon ^\dagger \circ N$ 其中N为归一化操作。 具体地，其数学形式为： $R_">
+<meta property="og:description" content="参考PHYSICAL REVIEW A 81, 062342 (2010)和目标论文 转置信道的量子纠错方法转置通道$R_p$是针对给定噪声通道$ \mathcal{E} $ 其Kraus算符$E_i$和代码子空间投影算符为(P)的解析定义恢复映射。其定义： $R_p &#x3D; P \circ \mathcal{E} ^\dagger \circ N$ 其中N为归一化操作。 具体地，其数学形式为： $R">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2026-01-30T12:53:30.000Z">
-<meta property="article:modified_time" content="2026-01-31T10:37:59.370Z">
+<meta property="article:modified_time" content="2026-02-03T03:25:47.556Z">
 <meta property="article:author" content="tonikroos">
 <meta property="article:tag" content="研究日志">
 <meta name="twitter:card" content="summary">
@@ -132,7 +132,7 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
-            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%BD%AC%E7%BD%AE%E4%BF%A1%E9%81%93%E7%9A%84%E9%87%8F%E5%AD%90%E7%BA%A0%E9%94%99%E6%96%B9%E6%B3%95"><span class="nav-number">1.</span> <span class="nav-text">转置信道的量子纠错方法</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Knill-Laflamme%E6%9D%A1%E4%BB%B6"><span class="nav-number">2.</span> <span class="nav-text">Knill-Laflamme条件</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%9B%AE%E6%A0%87%E8%AE%BA%E6%96%87%E6%83%85%E5%86%B5%E7%9A%84%E9%9D%9EKnill-Laflamme%E5%B1%80%E9%99%90%E5%8F%8A%E5%AE%9E%E9%99%85%E9%87%87%E7%94%A8%E7%9A%84%E7%BA%A0%E9%94%99%E6%A1%86%E6%9E%B6"><span class="nav-number">3.</span> <span class="nav-text">目标论文情况的非Knill-Laflamme局限及实际采用的纠错框架</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%87%87%E7%94%A8%E7%AD%89%E6%95%88Lindblad%E4%B8%BB%E6%96%B9%E7%A8%8B%E8%AE%A8%E8%AE%BA%E7%90%86%E8%AE%BA%E7%BA%A0%E9%94%99%E6%80%A7%E8%83%BD"><span class="nav-number">4.</span> <span class="nav-text">采用等效Lindblad主方程讨论理论纠错性能</span></a></li></ol></div>
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%BD%AC%E7%BD%AE%E4%BF%A1%E9%81%93%E7%9A%84%E9%87%8F%E5%AD%90%E7%BA%A0%E9%94%99%E6%96%B9%E6%B3%95"><span class="nav-number">1.</span> <span class="nav-text">转置信道的量子纠错方法</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Knill-Laflamme%E6%9D%A1%E4%BB%B6"><span class="nav-number">2.</span> <span class="nav-text">Knill-Laflamme条件</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%8F%8C%E5%88%86%E9%87%8Ffock%E6%80%81%E7%9A%84Kraus%E7%AE%97%E7%AC%A6%E8%A1%A8%E7%A4%BA"><span class="nav-number">3.</span> <span class="nav-text">双分量fock态的Kraus算符表示</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%9B%AE%E6%A0%87%E8%AE%BA%E6%96%87%E6%83%85%E5%86%B5%E7%9A%84%E9%9D%9EKnill-Laflamme%E5%B1%80%E9%99%90%E5%8F%8A%E5%AE%9E%E9%99%85%E9%87%87%E7%94%A8%E7%9A%84%E7%BA%A0%E9%94%99%E6%A1%86%E6%9E%B6"><span class="nav-number">4.</span> <span class="nav-text">目标论文情况的非Knill-Laflamme局限及实际采用的纠错框架</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%87%87%E7%94%A8%E7%AD%89%E6%95%88Lindblad%E4%B8%BB%E6%96%B9%E7%A8%8B%E8%AE%A8%E8%AE%BA%E7%90%86%E8%AE%BA%E7%BA%A0%E9%94%99%E6%80%A7%E8%83%BD"><span class="nav-number">5.</span> <span class="nav-text">采用等效Lindblad主方程讨论理论纠错性能</span></a></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -213,7 +213,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">Edited on</span>
-      <time title="Modified: 2026-01-31 18:37:59" itemprop="dateModified" datetime="2026-01-31T18:37:59+08:00">2026-01-31</time>
+      <time title="Modified: 2026-02-03 11:25:47" itemprop="dateModified" datetime="2026-02-03T11:25:47+08:00">2026-02-03</time>
     </span>
 
   
@@ -226,13 +226,16 @@
     
     
     <div class="post-body" itemprop="articleBody"><p><em>参考PHYSICAL REVIEW A 81, 062342 (2010)和目标论文</em></p>
-<h2 id="转置信道的量子纠错方法"><a href="#转置信道的量子纠错方法" class="headerlink" title="转置信道的量子纠错方法"></a>转置信道的量子纠错方法</h2><p>转置通道$R_p$是针对给定噪声通道$\varepsilon$(其Kraus算符$E_i$)和代码子空间投影算符为(P)的解析定义恢复映射。其定义：</p>
-<p>$R_p = P \circ \varepsilon ^\dagger \circ N$</p>
+<h2 id="转置信道的量子纠错方法"><a href="#转置信道的量子纠错方法" class="headerlink" title="转置信道的量子纠错方法"></a>转置信道的量子纠错方法</h2><p>转置通道$R_p$是针对给定噪声通道$ \mathcal{E} $ 其Kraus算符$E_i$和代码子空间投影算符为(P)的解析定义恢复映射。其定义：</p>
+<p>$R_p = P \circ \mathcal{E} ^\dagger \circ N$</p>
 <p>其中N为归一化操作。</p>
 <p>具体地，其数学形式为：</p>
-<p>$R_p = \sum^{N}_{i=1} P{E^\dagger}_i\varepsilon(P) ^{-\frac{1}{2}}(\cdot) \varepsilon(P) ^{-\frac{1}{2}}{E}_i P$</p>
-<p>相对简单。该论文证明了$R_p$是满足CPTP条件，且在满足Knill-Laflamme条件时是完美纠错。</p>
-<h2 id="Knill-Laflamme条件"><a href="#Knill-Laflamme条件" class="headerlink" title="Knill-Laflamme条件"></a>Knill-Laflamme条件</h2><h2 id="目标论文情况的非Knill-Laflamme局限及实际采用的纠错框架"><a href="#目标论文情况的非Knill-Laflamme局限及实际采用的纠错框架" class="headerlink" title="目标论文情况的非Knill-Laflamme局限及实际采用的纠错框架"></a>目标论文情况的非Knill-Laflamme局限及实际采用的纠错框架</h2><h2 id="采用等效Lindblad主方程讨论理论纠错性能"><a href="#采用等效Lindblad主方程讨论理论纠错性能" class="headerlink" title="采用等效Lindblad主方程讨论理论纠错性能"></a>采用等效Lindblad主方程讨论理论纠错性能</h2>
+<p>$R_p = \sum^{N}_{i=1} P{E^\dagger}_i\mathcal{E}(P) ^{-\frac{1}{2}}(\cdot) \mathcal{E}(P) ^{-\frac{1}{2}}{E}_i P$</p>
+<p>其中$\varepsilon(P)$是噪声作用后的代码空间，其作用为抵消噪声对代码空间各分量的不均匀缩放。具体来说，噪声具有特征值$\lambda$，那么该操作具有特征值(代码空间是各向同性的)${\lambda}^(-1)$，正好抵消。 $^\dagger$作为原噪声信道的共轭转置，具有相反的相位，部分抵消噪声的影响。P为代码空间投影算符，过滤掉不属于原代码空间的部分。该论文证明了$R_p$是满足CPTP条件，且在满足Knill-Laflamme条件时是完美纠错。</p>
+<p>$P E_i^{\dagger} \mathcal{E}(P)^{-1/2} E_j P = \beta_{ij} P + \Delta_{ij}$</p>
+<p>进一步分析：E的伴随映射某种程度上反映了E的逆操作。在物理上，伴随映射类似于噪声信道的“逆操作”。例如，如果噪声是幺正的（如相位误差），则E就是精确的逆。对于一般噪声（如非幺正信道），E†提供了一种“伪逆”，它能部分抵消噪声的效应。在完美QEC中，transpose channel等价于标准恢复映射，后者可通过综合征测量和条件门实现，这体现了伴随映射的物理可实现性。</p>
+<h2 id="Knill-Laflamme条件"><a href="#Knill-Laflamme条件" class="headerlink" title="Knill-Laflamme条件"></a>Knill-Laflamme条件</h2><h2 id="双分量fock态的Kraus算符表示"><a href="#双分量fock态的Kraus算符表示" class="headerlink" title="双分量fock态的Kraus算符表示"></a>双分量fock态的Kraus算符表示</h2><h2 id="目标论文情况的非Knill-Laflamme局限及实际采用的纠错框架"><a href="#目标论文情况的非Knill-Laflamme局限及实际采用的纠错框架" class="headerlink" title="目标论文情况的非Knill-Laflamme局限及实际采用的纠错框架"></a>目标论文情况的非Knill-Laflamme局限及实际采用的纠错框架</h2><p>总之，目标论文按照上述方式构建</p>
+<h2 id="采用等效Lindblad主方程讨论理论纠错性能"><a href="#采用等效Lindblad主方程讨论理论纠错性能" class="headerlink" title="采用等效Lindblad主方程讨论理论纠错性能"></a>采用等效Lindblad主方程讨论理论纠错性能</h2>
     </div>
 
     
