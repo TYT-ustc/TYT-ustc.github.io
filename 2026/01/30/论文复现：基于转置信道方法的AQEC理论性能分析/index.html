@@ -28,7 +28,7 @@
 <meta property="og:description" content="参考PHYSICAL REVIEW A 81, 062342 (2010)和目标论文 转置信道的量子纠错方法转置通道$R_p$是针对给定噪声通道$ \mathcal{E} $ 其Kraus算符$E_i$和代码子空间投影算符为(P)的解析定义恢复映射。其定义： $R_p &#x3D; P \circ \mathcal{E} ^\dagger \circ N$ 其中N为归一化操作。 具体地，其数学形式为： $R">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2026-01-30T12:53:30.000Z">
-<meta property="article:modified_time" content="2026-02-03T13:27:29.357Z">
+<meta property="article:modified_time" content="2026-02-03T13:54:40.606Z">
 <meta property="article:author" content="tonikroos">
 <meta property="article:tag" content="研究日志">
 <meta name="twitter:card" content="summary">
@@ -213,7 +213,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">Edited on</span>
-      <time title="Modified: 2026-02-03 21:27:29" itemprop="dateModified" datetime="2026-02-03T21:27:29+08:00">2026-02-03</time>
+      <time title="Modified: 2026-02-03 21:54:40" itemprop="dateModified" datetime="2026-02-03T21:54:40+08:00">2026-02-03</time>
     </span>
 
   
@@ -237,7 +237,13 @@
 <h2 id="Knill-Laflamme条件"><a href="#Knill-Laflamme条件" class="headerlink" title="Knill-Laflamme条件"></a>Knill-Laflamme条件</h2><h2 id="双分量fock态的Kraus算符表示"><a href="#双分量fock态的Kraus算符表示" class="headerlink" title="双分量fock态的Kraus算符表示"></a>双分量fock态的Kraus算符表示</h2><p>通过解主方程得到。这里查阅Nielsen的《量子计算与量子信息》中直接给出的方法，其中考虑了一个TLS系统，而主方程的解为(p为衰变概率,$p=\sqrt{1-exp(\frac{t_{int}}{T_1})}$)</p>
 <p>$E_0 = \begin{pmatrix}<br>1 &amp; 0 \\<br>0 &amp; \sqrt{1-p}<br>\end{pmatrix}$<br>$E_1 = \begin{pmatrix}<br>0 &amp; \sqrt{p} \\<br>0 &amp; 0<br>\end{pmatrix}$</p>
 <p>尝试推广到多光子玻色模式里。认为$t_int$时间内衰变一个光子概率为p，第一行为系统的最高能级，则<br>$E_0 = \begin{pmatrix}<br>1 &amp; 0 &amp; 0 &amp;…\\<br>0 &amp; \sqrt{1-p} &amp;0 &amp;  \\<br>0 &amp; 0 &amp; 1-p &amp;   \\<br>… &amp; &amp; &amp;…<br>\end{pmatrix}$</p>
-<h2 id="目标论文情况的非Knill-Laflamme局限及实际采用的纠错框架"><a href="#目标论文情况的非Knill-Laflamme局限及实际采用的纠错框架" class="headerlink" title="目标论文情况的非Knill-Laflamme局限及实际采用的纠错框架"></a>目标论文情况的非Knill-Laflamme局限及实际采用的纠错框架</h2><p>总之，目标论文按照上述方式构建</p>
+<p>这样我们就明确了Kraus算子基本的形式。想要写出其解析形式，注意到$e^{\lambda \hat{n}} \ket{m} =  {\lambda}^{m} \ket{m}$，以及如下的过程：</p>
+<p>$E_1 = \frac{(1 - e^{-t_{\text{int}}/T_1})^{1/2}}{\sqrt{1!}} e^{-\frac{t_{\text{int}}}{2T_1} a^\dagger a} a = \sqrt{1 - e^{-t_{\text{int}}/T_1}} \; e^{-\frac{t_{\text{int}}}{2T_1} a^\dagger a} a$</p>
+<p>利用算符恒等式（可由对易关系 $[a^\dagger a, a] = -a$导出）：</p>
+<p>$e^{-\lambda a^\dagger a} a = a e^{-\lambda (a^\dagger a - 1)}$</p>
+<p>令 $\lambda = \frac{t_{\text{int}}}{2T_1}$，则：</p>
+<p>$e^{-\frac{t_{\text{int}}}{2T_1} a^\dagger a} a = a e^{-\frac{t_{\text{int}}}{2T_1} (a^\dagger a - 1)}$</p>
+<h2 id="目标论文情况的非Knill-Laflamme局限及实际采用的纠错框架"><a href="#目标论文情况的非Knill-Laflamme局限及实际采用的纠错框架" class="headerlink" title="目标论文情况的非Knill-Laflamme局限及实际采用的纠错框架"></a>目标论文情况的非Knill-Laflamme局限及实际采用的纠错框架</h2><p>目标论文按照上述方式构建</p>
 <h2 id="采用等效Lindblad主方程讨论理论纠错性能"><a href="#采用等效Lindblad主方程讨论理论纠错性能" class="headerlink" title="采用等效Lindblad主方程讨论理论纠错性能"></a>采用等效Lindblad主方程讨论理论纠错性能</h2>
     </div>
 
