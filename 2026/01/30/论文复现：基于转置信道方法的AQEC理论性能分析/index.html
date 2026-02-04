@@ -28,7 +28,7 @@
 <meta property="og:description" content="参考PHYSICAL REVIEW A 81, 062342 (2010)和目标论文 转置信道的量子纠错方法转置通道$R_p$是针对给定噪声通道$ \mathcal{E} $ 其Kraus算符$E_i$和代码子空间投影算符为(P)的解析定义恢复映射。其定义： $R_p &#x3D; P \circ \mathcal{E} ^\dagger \circ N$ 其中N为归一化操作。 具体地，其数学形式为： $R">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2026-01-30T12:53:30.000Z">
-<meta property="article:modified_time" content="2026-02-03T13:54:40.606Z">
+<meta property="article:modified_time" content="2026-02-04T02:35:37.586Z">
 <meta property="article:author" content="tonikroos">
 <meta property="article:tag" content="研究日志">
 <meta name="twitter:card" content="summary">
@@ -213,7 +213,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">Edited on</span>
-      <time title="Modified: 2026-02-03 21:54:40" itemprop="dateModified" datetime="2026-02-03T21:54:40+08:00">2026-02-03</time>
+      <time title="Modified: 2026-02-04 10:35:37" itemprop="dateModified" datetime="2026-02-04T10:35:37+08:00">2026-02-04</time>
     </span>
 
   
@@ -231,18 +231,16 @@
 <p>其中N为归一化操作。</p>
 <p>具体地，其数学形式为：</p>
 <p>$R_p = \sum^{N}_{i=1} P{E^\dagger}_i\mathcal{E}(P) ^{-\frac{1}{2}}(\cdot) \mathcal{E}(P) ^{-\frac{1}{2}}{E}_i P$</p>
-<p>其中$\mathcal{E}(P)$是噪声作用后的代码空间，其作用为抵消噪声对代码空间各分量的不均匀缩放。具体来说，噪声具有特征值$\lambda$，那么该操作具有特征值(代码空间是各向同性的)${\lambda}^{-1}$，正好抵消。 $^\dagger$作为原噪声信道的共轭转置，具有相反的相位，部分抵消噪声的影响。P为代码空间投影算符，过滤掉不属于原代码空间的部分。该论文证明了$R_p$是满足CPTP条件，且在满足Knill-Laflamme条件时是完美纠错。</p>
+<p>其中$\mathcal{E}(P)$是噪声作用后的代码空间，其作用为抵消噪声对代码空间各分量的不均匀缩放。具体来说，噪声具有特征值$\lambda$，那么该操作具有特征值(代码空间是各向同性的)${\lambda}^{-1}$，正好抵消。 $E^\dagger$作为原噪声信道的共轭转置，具有相反的相位，部分抵消噪声的影响。P为代码空间投影算符，过滤掉不属于原代码空间的部分。该论文证明了$R_p$是满足CPTP条件，且在满足Knill-Laflamme条件时是完美纠错。</p>
 <p>$P E_i^{\dagger} \mathcal{E}(P)^{-1/2} E_j P = \beta_{ij} P + \Delta_{ij}$，<em>拓展到AQEC条件</em></p>
 <p>进一步分析：E的伴随映射某种程度上反映了E的逆操作。在物理上，伴随映射类似于噪声信道的“逆操作”。例如，如果噪声是幺正的（如相位误差），则E†就是精确的逆。($e^{-i\Delta t}$)对于一般噪声（如非幺正信道），E†提供了一种“伪逆”，它能部分抵消噪声的效应。在完美QEC中，transpose channel等价于标准恢复映射，后者可通过综合征测量和条件门实现，这体现了伴随映射的物理可实现性。<br><em>事实上，在算子代数里，E†就是E的逆</em></p>
 <h2 id="Knill-Laflamme条件"><a href="#Knill-Laflamme条件" class="headerlink" title="Knill-Laflamme条件"></a>Knill-Laflamme条件</h2><h2 id="双分量fock态的Kraus算符表示"><a href="#双分量fock态的Kraus算符表示" class="headerlink" title="双分量fock态的Kraus算符表示"></a>双分量fock态的Kraus算符表示</h2><p>通过解主方程得到。这里查阅Nielsen的《量子计算与量子信息》中直接给出的方法，其中考虑了一个TLS系统，而主方程的解为(p为衰变概率,$p=\sqrt{1-exp(\frac{t_{int}}{T_1})}$)</p>
 <p>$E_0 = \begin{pmatrix}<br>1 &amp; 0 \\<br>0 &amp; \sqrt{1-p}<br>\end{pmatrix}$<br>$E_1 = \begin{pmatrix}<br>0 &amp; \sqrt{p} \\<br>0 &amp; 0<br>\end{pmatrix}$</p>
-<p>尝试推广到多光子玻色模式里。认为$t_int$时间内衰变一个光子概率为p，第一行为系统的最高能级，则<br>$E_0 = \begin{pmatrix}<br>1 &amp; 0 &amp; 0 &amp;…\\<br>0 &amp; \sqrt{1-p} &amp;0 &amp;  \\<br>0 &amp; 0 &amp; 1-p &amp;   \\<br>… &amp; &amp; &amp;…<br>\end{pmatrix}$</p>
-<p>这样我们就明确了Kraus算子基本的形式。想要写出其解析形式，注意到$e^{\lambda \hat{n}} \ket{m} =  {\lambda}^{m} \ket{m}$，以及如下的过程：</p>
-<p>$E_1 = \frac{(1 - e^{-t_{\text{int}}/T_1})^{1/2}}{\sqrt{1!}} e^{-\frac{t_{\text{int}}}{2T_1} a^\dagger a} a = \sqrt{1 - e^{-t_{\text{int}}/T_1}} \; e^{-\frac{t_{\text{int}}}{2T_1} a^\dagger a} a$</p>
-<p>利用算符恒等式（可由对易关系 $[a^\dagger a, a] = -a$导出）：</p>
-<p>$e^{-\lambda a^\dagger a} a = a e^{-\lambda (a^\dagger a - 1)}$</p>
-<p>令 $\lambda = \frac{t_{\text{int}}}{2T_1}$，则：</p>
-<p>$e^{-\frac{t_{\text{int}}}{2T_1} a^\dagger a} a = a e^{-\frac{t_{\text{int}}}{2T_1} (a^\dagger a - 1)}$</p>
+<p>尝试推广到多光子玻色模式里。认为$t_{int}$时间内衰变一个光子概率为p，则n个光子衰变k个的概率为二项分布，即<br>$P_n = C_{k}^{n}p^k (1-p)^{(n-k)}$</p>
+<p>这样我们就明确了$E_k$矩阵元的形式，即在行序号减去列序号等于k的一条上，有矩阵元$a_k = \sqrt{P_n}$，且其他位置等于零</p>
+<p>注意到我们需要用湮灭算符a来描述，且a满足$a_k \ket{n} = \sqrt{\frac{n!}{(n-k)!}} \ket{n-k}$，$e^{\lambda \hat{n}} \ket{m}= e^{m\lambda} \ket{m}$，我们不妨猜测矩阵元的解析形式具有$\sqrt{p^k (1-p)^{aa\dagger}}a^k$的形式，这样一来，仅有m=n-k的矩阵元上有元素，且形式满足。我们再来定系数，可以发现刚好差一个k!分之一，再乘上这个系数就得到了最后的结果。根据二项分布的性质，归一化条件$\sum E_i E_i^* = I$是显然的，故不需要再额外考虑归一化系数。</p>
+<p>写出这个结果：</p>
+<p>$E_k = \frac{(1 - e^{-\frac{t_{\text{int}}}{T_1}})^{k/2}}{\sqrt{k!}} e^{-\frac{t_{\text{int}}}{2T_1} a^\dagger a} a^k$</p>
 <h2 id="目标论文情况的非Knill-Laflamme局限及实际采用的纠错框架"><a href="#目标论文情况的非Knill-Laflamme局限及实际采用的纠错框架" class="headerlink" title="目标论文情况的非Knill-Laflamme局限及实际采用的纠错框架"></a>目标论文情况的非Knill-Laflamme局限及实际采用的纠错框架</h2><p>目标论文按照上述方式构建</p>
 <h2 id="采用等效Lindblad主方程讨论理论纠错性能"><a href="#采用等效Lindblad主方程讨论理论纠错性能" class="headerlink" title="采用等效Lindblad主方程讨论理论纠错性能"></a>采用等效Lindblad主方程讨论理论纠错性能</h2>
     </div>
