@@ -139,7 +139,7 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
         <a href="/archives/">
-          <span class="site-state-item-count">4</span>
+          <span class="site-state-item-count">5</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
@@ -161,6 +161,74 @@
     </div>
 
     <div class="main-inner index posts-expand">
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2026/02/06/%E8%AE%BA%E6%96%87%E5%A4%8D%E7%8E%B0%EF%BC%9A%E5%BC%95%E5%85%A5QJT%E8%BF%9B%E4%B8%80%E6%AD%A5%E6%8F%90%E5%8D%87%E6%80%A7%E8%83%BD%E5%8F%8A%E6%95%B0%E6%8D%AE%E6%A8%A1%E6%8B%9F/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="tonikroos">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Hexo">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content=" | Hexo">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2026/02/06/%E8%AE%BA%E6%96%87%E5%A4%8D%E7%8E%B0%EF%BC%9A%E5%BC%95%E5%85%A5QJT%E8%BF%9B%E4%B8%80%E6%AD%A5%E6%8F%90%E5%8D%87%E6%80%A7%E8%83%BD%E5%8F%8A%E6%95%B0%E6%8D%AE%E6%A8%A1%E6%8B%9F/" class="post-title-link" itemprop="url">论文复现：引入QJT进一步提升性能及数据模拟</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+
+      <time title="Created: 2026-02-06 13:18:34" itemprop="dateCreated datePublished" datetime="2026-02-06T13:18:34+08:00">2026-02-06</time>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
 
     
 
@@ -274,7 +342,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">Edited on</span>
-      <time title="Modified: 2026-02-05 21:36:07" itemprop="dateModified" datetime="2026-02-05T21:36:07+08:00">2026-02-05</time>
+      <time title="Modified: 2026-02-06 13:21:41" itemprop="dateModified" datetime="2026-02-06T13:21:41+08:00">2026-02-06</time>
     </span>
 
   
@@ -305,9 +373,15 @@
 <p>$E_k = \frac{(1 - e^{-\frac{t_{\text{int}}}{T_1}})^{k/2}}{\sqrt{k!}} e^{-\frac{t_{\text{int}}}{2T_1} a^\dagger a} a^k$</p>
 <h2 id="目标论文情况的非Knill-Laflamme局限及实际采用的纠错框架"><a href="#目标论文情况的非Knill-Laflamme局限及实际采用的纠错框架" class="headerlink" title="目标论文情况的非Knill-Laflamme局限及实际采用的纠错框架"></a>目标论文情况的非Knill-Laflamme局限及实际采用的纠错框架</h2><p>我们先接受论文提出的作为KL条件的扩展，HNLS条件，即噪声条件和用来测量的算子完全正交，这种情况下认为情况满足KL条件，可以进行完美纠错。具体来说，HNLS要求lindblad算子和演化哈密顿量正交。论文情况中，lindblad算符张成空间[I,a,$a^\dagger$,$aa^{\dagger}$]，而演化哈密顿量为$H = \omega aa^\dagger$，这说明(至少采用transpose channel)无法完美纠错。</p>
 <p>目标论文按照上述方式构建恢复算符。其过程如下：（暂时没写，之后填坑）</p>
-<p>从这些算符的形式，我们可以看出，恢复算符并没有恢复变形的代码空间。这很可能是因为这些变形属于高阶效应被忽略；总之，这样的恢复算符使得量子态维护在原来的代码空间。然而，变形的代码空间仍然使得量子态最后处于混态。<strong>我们需要明确的是，虽然混态的形式可以数学地预测，也就是说可以测量，但根据量子态费舍尔效应的Cauchy不等式，其费舍尔信息无疑是低于可分辨的纯态的，也就是说，测量性能在我们可以分辨量子态处于哪个纯态时候更高</strong>。研究者因此采用所谓的QFI，即利用纠缠的辅助比特判断量子态具有怎样的衰变轨迹。</p>
+<p>从这些算符的形式，我们可以看出，恢复算符并没有恢复变形的代码空间。这很可能是因为这些变形属于高阶效应被忽略；总之，这样的恢复算符使得量子态维护在原来的代码空间。然而，变形的代码空间仍然使得量子态最后处于混态。<strong>我们需要明确的是，虽然混态的形式可以数学地预测，也就是说可以测量，但根据量子态费舍尔效应的Cauchy不等式，其费舍尔信息无疑是低于可分辨的纯态的，也就是说，测量性能在我们可以分辨量子态处于哪个纯态时候更高</strong>。研究者因此采用所谓的QJT，即利用纠缠的辅助比特判断量子态具有怎样的衰变轨迹。</p>
 <p>可以利用软件来模拟量子态的演化，并给出Fisher信息的曲线来辅助研究，下面先理论地分析纠错性能。</p>
-<h2 id="采用等效Lindblad主方程讨论理论纠错性能"><a href="#采用等效Lindblad主方程讨论理论纠错性能" class="headerlink" title="采用等效Lindblad主方程讨论理论纠错性能"></a>采用等效Lindblad主方程讨论理论纠错性能</h2>
+<h2 id="采用等效Lindblad主方程讨论理论纠错性能"><a href="#采用等效Lindblad主方程讨论理论纠错性能" class="headerlink" title="采用等效Lindblad主方程讨论理论纠错性能"></a>采用等效Lindblad主方程讨论理论纠错性能</h2><p>我们发现恢复算符的形式是将错误的代码空间各向同性地回复到原代码空间，即（考虑两个态直接的比例和相对相位）：</p>
+<p>$\mathcal{R} \circ E_1 (a \ket{m} + b \ket{n}) = a\sqrt{m}\ket{m}+ b\sqrt{n}\ket{n}$</p>
+<p>这个就像是在说，当发生一次光子损失，仅仅给态乘上根号下n，而不改变代码空间。这一操作等效于作用上一个$\sqrt{\hat{n}}=\sqrt{aa^\dagger}$。</p>
+<p>根据以上思考，等效的主方程可以写为：</p>
+<p>$\frac{d}{d t}\rho = -i\omega\left[a^{\dagger} a, \rho\right] + \frac{1}{2 T_{1}} \mathcal{L}_{\sqrt{aa^\dagger}}(\rho)$</p>
+<p>接下来的思路：解方程，计算Fisher信息，并借此初步确定参数。这部分的工作之后回来补上。</p>
+
       
     </div>
 
