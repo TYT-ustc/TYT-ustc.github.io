@@ -20,12 +20,10 @@
 
 <script class="next-config" data-name="main" type="application/json">{"hostname":"example.com","root":"/","images":"/images","scheme":"Muse","darkmode":true,"version":"8.27.0","exturl":false,"sidebar":{"position":"left","width_expanded":320,"width_dual_column":240,"display":"post","padding":18,"offset":12},"hljswrap":true,"codeblock":{"theme":{"light":"default","dark":"stackoverflow-dark"},"prism":{"light":"prism","dark":"prism-dark"},"copy_button":{"enable":false,"style":null},"fold":{"enable":false,"height":500},"language":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"duration":200,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"i18n":{"placeholder":"Searching...","empty":"We didn't find any results for the search: ${query}","hits_time":"${hits} results found in ${time} ms","hits":"${hits} results found"}}</script><script src="/js/config.js" defer></script>
 
-    <meta name="description" content="简介 QuTiP是一个基于Python的运算软件，提供量子态作为对象，具体可能是用矩阵作为计算对象。针对量子力学三条基本公设，软件提供： 1、态的定义。如函数fock(N,n)； 2、态的演化。提供函数sesolve(H,state,timelist)和mesolve(H,state,timelist,lindblad)用来描述演化。湮灭算符用函数destroy(N)表示。 3、态的测量。QuTi">
-<meta property="og:type" content="article">
+    <meta property="og:type" content="article">
 <meta property="og:title" content="qutip使用方法笔记">
 <meta property="og:url" content="http://example.com/2026/02/09/qutip%E4%BD%BF%E7%94%A8%E6%96%B9%E6%B3%95%E7%AC%94%E8%AE%B0/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="简介 QuTiP是一个基于Python的运算软件，提供量子态作为对象，具体可能是用矩阵作为计算对象。针对量子力学三条基本公设，软件提供： 1、态的定义。如函数fock(N,n)； 2、态的演化。提供函数sesolve(H,state,timelist)和mesolve(H,state,timelist,lindblad)用来描述演化。湮灭算符用函数destroy(N)表示。 3、态的测量。QuTi">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2026-02-09T12:54:49.000Z">
 <meta property="article:modified_time" content="2026-02-10T12:08:20.729Z">
@@ -75,7 +73,11 @@
   <noscript>
     <link rel="stylesheet" href="/css/noscript.css">
   </noscript>
-</head>
+<!-- hexo injector head_end start -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css">
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/hexo-math@4.0.0/dist/style.css">
+<!-- hexo injector head_end end --></head>
 
 <body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
   <div class="headband"></div>
@@ -220,12 +222,12 @@
     
     
     
-    <div class="post-body" itemprop="articleBody"><h2 id="简介">简介</h2>
+    <div class="post-body" itemprop="articleBody"><html><head></head><body><h2 id="简介">简介</h2>
 <p>QuTiP是一个基于Python的运算软件，提供量子态作为对象，具体可能是用矩阵作为计算对象。针对量子力学三条基本公设，软件提供：</p>
 <p>1、态的定义。如函数fock(N,n)；</p>
 <p>2、态的演化。提供函数sesolve(H,state,timelist)和mesolve(H,state,timelist,lindblad)用来描述演化。湮灭算符用函数destroy(N)表示。</p>
 <p>3、态的测量。QuTiP提供理论平均值expect(f,state)、物理的测量和理论的测量。</p>
-
+</body></html>
     </div>
 
     
